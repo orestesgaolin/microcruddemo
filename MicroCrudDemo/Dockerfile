@@ -1,4 +1,4 @@
-﻿FROM microsoft/aspnetcore-build:2.0 AS build-env
+﻿FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /app
 
 # copy csproj and restore as distinct layers
@@ -13,4 +13,4 @@ RUN dotnet publish -c Release -o out
 FROM microsoft/aspnetcore:2.0
 WORKDIR /app
 COPY --from=build-env /app/out .
-ENTRYPOINT ["dotnet", "aspnetapp.dll"]
+ENTRYPOINT ["dotnet", "MicroCrudDemo.dll"]
