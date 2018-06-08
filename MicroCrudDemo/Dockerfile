@@ -1,6 +1,13 @@
 ﻿FROM microsoft/aspnetcore-build:2.0 AS build-env
 WORKDIR /app
 
+# Labels
+LABEL Author="Dominik Roszkowski <kontakt@dominikroszkowski.pl>"
+LABEL Version="1.0"
+
+ENV PORT 5000
+ENV WDIR /app
+
 # copy csproj and restore as distinct layers
 COPY *.csproj ./
 RUN dotnet restore

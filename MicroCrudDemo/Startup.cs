@@ -38,7 +38,7 @@ namespace MicroCrudDemo
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "My simple library CRUD API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "Micro CRUD Demo API", Version = "v1" });
             });
         }
 
@@ -52,7 +52,7 @@ namespace MicroCrudDemo
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My simple library CRUD API");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Micro CRUD Demo API");
             });
 
             if (env.IsDevelopment())
