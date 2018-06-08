@@ -61,6 +61,8 @@ namespace MicroCrudDemo
             }
 
             app.UseMvc();
+            app.UseDefaultFiles(); 
+            app.UseStaticFiles();
         }
     }
 }
